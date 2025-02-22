@@ -1,0 +1,2 @@
+# Ponderada_S3_chico
+Ponderada_S3_chico
