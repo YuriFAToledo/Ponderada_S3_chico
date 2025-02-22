@@ -102,16 +102,18 @@ pdf.ln(5)
 pdf.image("img_7.png", x=10, w=180)  # Gráfico xAI Grok-3
 pdf.ln(5)
 
-# Análise Crítica
+# Boas Práticas da Aela.io
 pdf.set_font("Arial", style='B', size=12)
-pdf.cell(200, 10, "5. Análise Crítica: Transparência e Eficiência", ln=True)
+pdf.cell(200, 10, "5. Aplicação de Boas Práticas de Dashboards", ln=True)
 pdf.set_font("Arial", size=12)
-analysis_text = (
-    "O LLM-Stats acerta ao apresentar dados com clareza e sem manipulações. "
-    "Seu uso de gráficos bem organizados e cores distintas facilita a leitura e a tomada de decisões. "
-    "A comparação com a xAI reforça a importância da escala absoluta para evitar distorções visuais."
+aela_text = (
+    "De acordo com o artigo da Aela.io sobre design de dashboards, alguns princípios fundamentais são:\n\n"
+    "- **Uso de escalas absolutas**: O LLM-Stats segue essa prática, garantindo que as comparações entre modelos sejam justas.\n"
+    "- **Hierarquia visual clara**: Os rankings são organizados de forma intuitiva, priorizando os modelos mais relevantes.\n"
+    "- **Uso eficaz das cores**: Cada modelo possui uma cor distinta, facilitando a identificação rápida.\n\n"
+    "Já no caso da xAI, a decisão de cortar o gráfico prejudica a transparência dos dados, indo contra a recomendação de clareza e integridade na visualização."
 )
-pdf.multi_cell(0, 8, analysis_text)
+pdf.multi_cell(0, 8, aela_text)
 pdf.ln(5)
 
 # Conclusão
@@ -120,7 +122,10 @@ pdf.cell(200, 10, "6. Conclusão", ln=True)
 pdf.set_font("Arial", size=12)
 conclusion_text = (
     "O LLM-Stats se destaca como um dashboard confiável e transparente para avaliação de LLMs. "
-    "Sua abordagem gráfica bem fundamentada facilita a análise comparativa e se alinha às boas práticas descritas na Aela.io."
+    "Ao seguir as melhores práticas descritas na Aela.io, como escalas absolutas, hierarquia visual clara e cores bem definidas, "
+    "ele oferece uma experiência eficiente e útil para a comunidade de IA. "
+    "Por outro lado, abordagens como a da xAI mostram como pequenas manipulações gráficas podem impactar a percepção dos dados, "
+    "reforçando a importância da transparência na visualização de informações."
 )
 pdf.multi_cell(0, 8, conclusion_text)
 pdf.ln(5)
@@ -137,7 +142,7 @@ references_text = (
 pdf.multi_cell(0, 8, references_text)
 
 # Salvar PDF
-pdf_output_path = "./analise_dashboard_llm_stats_completa.pdf"
+pdf_output_path = "./analise_dashboard_llm_stats_revisada.pdf"
 pdf.output(pdf_output_path)
 
 # Retornar caminho do PDF gerado
